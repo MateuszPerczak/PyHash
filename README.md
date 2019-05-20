@@ -13,5 +13,5 @@ Main programmer, designer: Mateusz Perczak
 + hashlib
 
 ## Some pictures of application
-![Picture of application]https://github.com/losek1/SHA_Tool/blob/master/images/1.PNG
-![Picture of application]https://github.com/losek1/SHA_Tool/blob/master/images/2.PNG
+![Picture of application](https://github.com/losek1/SHA_Tool/blob/master/images/1.PNG)
+![Picture of application](https://github.com/losek1/SHA_Tool/blob/master/images/2.PNG)
