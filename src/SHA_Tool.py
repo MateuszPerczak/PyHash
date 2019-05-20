@@ -76,6 +76,7 @@ def add_file():
     file = askopenfilename(initialdir=current_dir, filetypes=(("Exe file", "*.exe"), ("All Files", "*.*")),
                            title="Choose a exe file.")
     if file:
+        root.title("SHA Tool" + "- {}".format(os.path.basename(file)))
         sha1_entry.insert(0, str(sha1(file)))
         md5_entry.insert(0, str(mmd5(file)))
         sha256_entry.insert(0, str(sha256(file)))
