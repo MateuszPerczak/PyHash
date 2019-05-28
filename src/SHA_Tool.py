@@ -6,6 +6,7 @@ from tkinter.filedialog import askopenfilename
 root = Tk()
 root.geometry("475x110")
 root.title("SHA Tool")
+root.minsize(475, 110)
 root.resizable(width=TRUE, height=FALSE)
 root.configure(background="#fff")
 current_dir = os.getcwd()
@@ -74,7 +75,7 @@ def add_file():
     sha1_entry.delete(0, END)
     md5_entry.delete(0, END)
     sha256_entry.delete(0, END)
-    file = askopenfilename(initialdir=current_dir, filetypes=(("Exe file", "*.exe"), ("All Files", "*.*")),
+    file = askopenfilename(initialdir=current_dir, filetypes=(("Exe files", "*.exe"), ("All Files", "*.*")),
                            title="Choose a exe file.")
     if file:
         root.title("SHA Tool: {}".format(os.path.basename(file)))
@@ -135,12 +136,12 @@ sha256_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
 # end
 
 # main
-add_file = ttk.Button(root, text="ADD", takefocus=0, command=add_file)
+add_file = ttk.Button(root, text="ADD FILE", takefocus=0, command=add_file)
 add_file.pack(side=TOP, fill=X)
 sha1_frame.pack(fill=X)
 sha256_frame.pack(fill=X)
 md5_frame.pack(fill=X)
-version_label = ttk.Label(root, text=" v1.0.2", background="#fff", font='Bahnschrift 9')
+version_label = ttk.Label(root, text=" v1.0.3", background="#fff", font='Bahnschrift 9')
 version_label.pack(side=LEFT)
 # end
 
