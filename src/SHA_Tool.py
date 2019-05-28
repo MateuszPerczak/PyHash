@@ -4,9 +4,9 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.filedialog import askopenfilename
 root = Tk()
-root.geometry("475x110")
+root.geometry("480x110")
 root.title("SHA Tool")
-root.minsize(475, 110)
+root.minsize(480, 110)
 root.resizable(width=TRUE, height=FALSE)
 root.configure(background="#fff")
 current_dir = os.getcwd()
@@ -79,9 +79,9 @@ def add_file():
                            title="Choose a exe file.")
     if file:
         root.title("SHA Tool: {}".format(os.path.basename(file)))
-        sha1_entry.insert(0, str(sha1(file)))
-        md5_entry.insert(0, str(mmd5(file)))
-        sha256_entry.insert(0, str(sha256(file)))
+        sha1_entry.insert(0, str(sha1(file).upper()))
+        md5_entry.insert(0, str(mmd5(file).upper()))
+        sha256_entry.insert(0, str(sha256(file).upper()))
 
 
 def sha1(file):
@@ -113,7 +113,7 @@ def sha256(file):
 
 # sha1_frame
 sha1_frame = Frame(root)
-sha1_label = ttk.Label(sha1_frame, text="SHA1", background="#fff", font='Bahnschrift 9', width=7)
+sha1_label = ttk.Label(sha1_frame, text="SHA1", background="#fff", font='Bahnschrift 9', width=6)
 sha1_entry = ttk.Entry(sha1_frame, font='Bahnschrift 9')
 sha1_label.pack(side=LEFT, anchor=NW)
 sha1_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
@@ -121,7 +121,7 @@ sha1_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
 
 # md5
 md5_frame = Frame(root)
-md5_label = ttk.Label(md5_frame, text="MD5", background="#fff", font='Bahnschrift 9', width=7)
+md5_label = ttk.Label(md5_frame, text="MD5", background="#fff", font='Bahnschrift 9', width=6)
 md5_entry = ttk.Entry(md5_frame, font='Bahnschrift 9')
 md5_label.pack(side=LEFT, anchor=NW)
 md5_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
@@ -129,7 +129,7 @@ md5_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
 
 # sha256
 sha256_frame = Frame(root)
-sha256_label = ttk.Label(sha256_frame, text="SHA256", background="#fff", font='Bahnschrift 9', width=7)
+sha256_label = ttk.Label(sha256_frame, text="SHA256", background="#fff", font='Bahnschrift 9', width=6)
 sha256_entry = ttk.Entry(sha256_frame, font='Bahnschrift 9')
 sha256_label.pack(side=LEFT, anchor=NW)
 sha256_entry.pack(side=LEFT, anchor=NW, fill=X, expand=TRUE)
