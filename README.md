@@ -1,6 +1,9 @@
 # SHA_Tool
 Python SHA1, SHA256, MD5 Generator
 
+## Icons
+https://icons8.com/
+
 ## Authors
 Main programmer, designer: Mateusz Perczak
 
