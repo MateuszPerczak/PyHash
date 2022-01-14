@@ -1,4 +1,4 @@
-# SHA_Tool
+# PyHash
 
 Python SHA1, SHA256, MD5 Generator
 
