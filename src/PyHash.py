@@ -14,7 +14,7 @@ class PyHash(Tk):
         self.geometry(
             f'150x150+{int(self.winfo_x() + ((self.winfo_screenwidth() / 2) - 75))}+{int(self.winfo_y() + ((self.winfo_screenheight() / 2) - 75))}')
         self.minsize(150, 150)
-        self.iconbitmap(r'Resources\\Icons\\Static\\icon.ico')
+        self.iconbitmap(join('Resources', 'Icons', 'Static', 'icon.ico'))
         # apply custom layout
         View.Layout(self)
         # init theme

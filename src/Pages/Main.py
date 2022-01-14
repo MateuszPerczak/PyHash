@@ -1,7 +1,7 @@
 from re import S
 from tkinter import ttk, PhotoImage
 from Components.CustomEntry import CustomEntry
-from os.path import basename
+from os.path import basename, join
 from threading import Thread
 
 
@@ -14,8 +14,8 @@ class MainPage(ttk.Frame):
         self.about_page: object = props['about_page']
         # icons cache
         self.icons: dict = {
-            'add': PhotoImage(file=fr'Resources\\Icons\\{theme}\\add.png'),
-            'info': PhotoImage(file=fr'Resources\Icons\\{theme}\\info.png')
+            'add': PhotoImage(file=join('Resources', 'Icons', theme, 'add.png')),
+            'info': PhotoImage(file=join('Resources', 'Icons', theme, 'info.png'))
         }
         # page layout
         # left frame

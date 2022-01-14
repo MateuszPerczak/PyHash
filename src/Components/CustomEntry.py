@@ -1,5 +1,6 @@
 from tkinter import ttk, PhotoImage
 from pyperclip import copy
+from os.path import join
 
 
 class CustomEntry(ttk.Frame):
@@ -7,7 +8,7 @@ class CustomEntry(ttk.Frame):
         super().__init__(parent)
         # icon cahce
         self.icons: dict = {
-            'copy': PhotoImage(file=fr'Resources\\Icons\\{theme}\\copy.png'),
+            'copy': PhotoImage(file=join('Resources', 'Icons', theme, 'copy.png')),
         }
         # layout
         ttk.Label(self, text=text, style='small.TLabel', width=6).pack(

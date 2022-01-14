@@ -2,7 +2,7 @@ from platform import system as get_system
 
 system: str = get_system()
 
-if system == 'darwin':
+if system == 'Darwin':
     from AppKit import NSColor
 
     def get_os_theme() -> str:
@@ -20,7 +20,7 @@ elif system == 'Windows':
         except Exception:
             return 'Dark'
 
-elif system == 'linux':
+elif system == 'Linux':
     from gi.repository import Gtk
 
     def get_os_theme() -> str:

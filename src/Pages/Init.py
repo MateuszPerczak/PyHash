@@ -1,4 +1,6 @@
+from shlex import join
 from tkinter import ttk, PhotoImage
+from os.path import join
 
 
 class InitPage(ttk.Frame):
@@ -6,6 +8,6 @@ class InitPage(ttk.Frame):
         super().__init__(parent, style='dark.TFrame')
         # page layout
         self.icon: PhotoImage = PhotoImage(
-            file=r'Resources\\Icons\\Static\\icon.png')
+            file=join('Resources', 'Icons', 'Static', 'icon.png'))
         ttk.Label(self, image=self.icon, anchor='c').pack(
             side='top', fill='both', expand=True)

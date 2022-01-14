@@ -1,4 +1,5 @@
 from tkinter import ttk, PhotoImage
+from os.path import join
 
 
 class AboutPage(ttk.Frame):
@@ -8,8 +9,8 @@ class AboutPage(ttk.Frame):
         theme = props['theme'].get_theme()
         # icons cache
         self.icons: dict = {
-            'info': PhotoImage(file=fr'Resources\Icons\\{theme}\\info.png'),
-            'back': PhotoImage(file=fr'Resources\Icons\\{theme}\\back.png'),
+            'info': PhotoImage(file=join('Resources', 'Icons', theme, 'info.png')),
+            'back': PhotoImage(file=join('Resources', 'Icons', theme, 'back.png'))
         }
         # page layout
         content: ttk.Frame = ttk.Frame(self, style='dark.TFrame')
