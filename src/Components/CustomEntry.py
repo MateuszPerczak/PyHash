@@ -14,12 +14,14 @@ class CustomEntry(ttk.Frame):
         ttk.Label(self, text=text, style='small.TLabel', width=6).pack(
             side='left', padx=(0, 10))
         self.entry: ttk.Entry = ttk.Entry(
-            self, style='dark.TEntry', font=('catamaran 11 bold'))
+            self, style='dark.TEntry', font=('catamaran 11 bold'), state='disabled')
         self.entry.pack(side='left', fill='x', expand=True)
         ttk.Button(self, image=self.icons['copy'], style='light.TButton', command=lambda: copy(self.entry.get())).pack(
             side='left', padx=10)
 
     def set(self: object, text: str) -> None:
+        self.entry.config(state='normal')
         self.entry.delete(0, 'end')
         if text:
             self.entry.insert(0, text)
+        self.entry.config(state='disabled')

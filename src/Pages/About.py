@@ -16,7 +16,7 @@ class AboutPage(ttk.Frame):
         content: ttk.Frame = ttk.Frame(self, style='dark.TFrame')
         ttk.Label(content, image=self.icons['info'], text='About PyHash', style='big.TLabel', compound='left').pack(
             side='top', pady=10, padx=10, fill='x')
-        ttk.Label(content, text='Version: 1.0.4 Build: 140122', style='dark.small.TLabel').pack(
+        ttk.Label(content, text='Version: 1.0.5 Build: 140122', style='dark.small.TLabel').pack(
             side='top', padx=10, fill='x')
         ttk.Label(content, text='Icons: Icons8', style='dark.small.TLabel').pack(
             side='top', padx=10, fill='x')

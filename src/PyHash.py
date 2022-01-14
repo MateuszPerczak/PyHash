@@ -4,6 +4,7 @@ from Pages.Init import InitPage
 from Pages.Main import MainPage
 from Components.HashManager import HashManager
 from Pages.About import AboutPage
+from os.path import join
 
 
 class PyHash(Tk):
@@ -44,6 +45,7 @@ class PyHash(Tk):
         self.geometry(
             f'500x150+{int(self.winfo_x() - 175)}+{int(self.winfo_y())}')
         self.minsize(500, 150)
+        self.resizable(True, False)
 
 
 if __name__ == "__main__":
