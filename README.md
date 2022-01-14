@@ -21,6 +21,7 @@ Main programmer, designer: Mateusz Perczak
 - hashlib
 - threading
 - pyperclip
+- darkdetect
 
 ## Some pictures of application
 
