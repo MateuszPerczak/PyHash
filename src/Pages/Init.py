@@ -1,4 +1,3 @@
-from shlex import join
 from tkinter import ttk, PhotoImage
 from os.path import join
 

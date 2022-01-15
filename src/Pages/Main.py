@@ -1,4 +1,3 @@
-from re import S
 from tkinter import ttk, PhotoImage
 from Components.CustomEntry import CustomEntry
 from os.path import basename, join

@@ -25,8 +25,6 @@ class AboutPage(ttk.Frame):
         content.place(x=0, y=0, relwidth=1, relheight=1)
         # back button
         back: ttk.Frame = ttk.Frame(self, style='dark.TFrame')
-
         ttk.Button(back, image=self.icons['back'], command=lambda: self.lower(
         ), style='light.TButton').pack(padx=10, pady=10)
-
         back.place(relx=1, rely=1, anchor='se')
